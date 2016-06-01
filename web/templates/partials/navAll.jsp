@@ -13,13 +13,13 @@
           </button>
           <!-- LOGO -->              
           <!-- TEXT BASED LOGO -->
-          <a class="navbar-brand" href="index1.html">GESTION DE STOCK</a>              
+          <a class="navbar-brand" href="home.jsp">GESTION DE STOCK</a>              
           <!-- IMG BASED LOGO  -->
            <!-- <a class="navbar-brand" href="index.html"><img src="assets/images/logo.png" alt="logo"></a> -->
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul id="top-menu" class="nav navbar-nav navbar-right main-nav">
-            <li class="active"><a href="index.jsp">Home</a></li>
+            <li class="active"><a href="home.jsp">Home</a></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Clientelle <span class="fa fa-angle-down"></span></a>
               <ul class="dropdown-menu" role="menu">

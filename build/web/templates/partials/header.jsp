@@ -117,12 +117,12 @@
           <h4 class="modal-title"><i class="fa fa-unlock-alt"></i>Login</h4>
         </div>
         <div class="modal-body">
-          <form>
+          <form  method="POST" action="./LoginServlet">
             <div class="form-group">
-              <input type="text" placeholder="Username" class="form-control">
+                <input type="text" placeholder="username" value="${user.username}" class="form-control">
             </div>
             <div class="form-group">
-              <input type="password" placeholder="Password" class="form-control">
+              <input type="password" placeholder="Password" value="${user.password}" class="form-control">
             </div>
              <div class="loginbox">
               <label><input type="checkbox"><span>Remember me</span></label>

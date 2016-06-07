@@ -25,7 +25,6 @@ public class ClientDao {
     ResultSet rs ;
     Client cli;
     
-    
         //vous utiliserez cette methode pour fermer toute les instances de connexions en cour
     public void closeConnexion(){
         Connection connexion = DBConnection.connexionDatabase();

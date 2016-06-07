@@ -12,29 +12,42 @@ package com.thedevbridge.stockweb.entities;
 public class Produit {
     
     private int idProduit;
+    private String code_produit;
     private String reference;
     private String designation;
+    private String rangement;
+    private double remise;
     private double prix;
+    private int stock;
     private int idFournisseur;
-
-    public Produit(int idProduit, String reference, String designation, double prix, int idFournisseur) {
-        this.idProduit = idProduit;
-        this.reference = reference;
-        this.designation = designation;
-        this.prix = prix;
-        this.idFournisseur = idFournisseur;
-    }
-
-    public Produit(String reference, String designation, double prix, int idFournisseur) {
-        this.reference = reference;
-        this.designation = designation;
-        this.prix = prix;
-        this.idFournisseur = idFournisseur;
-    }
 
     public Produit() {
     }
 
+    public Produit(String code_produit, String reference, String designation, String rangement, double remise, double prix, int stock, int idFournisseur) {
+        this.code_produit = code_produit;
+        this.reference = reference;
+        this.designation = designation;
+        this.rangement = rangement;
+        this.remise = remise;
+        this.prix = prix;
+        this.stock = stock;
+        this.idFournisseur = idFournisseur;
+    }
+
+    public Produit(int idProduit, String code_produit, String reference, String designation, String rangement, double remise, double prix, int stock, int idFournisseur) {
+        this.idProduit = idProduit;
+        this.code_produit = code_produit;
+        this.reference = reference;
+        this.designation = designation;
+        this.rangement = rangement;
+        this.remise = remise;
+        this.prix = prix;
+        this.stock = stock;
+        this.idFournisseur = idFournisseur;
+    }
+
+    
     public int getIdProduit() {
         return idProduit;
     }
@@ -73,6 +86,38 @@ public class Produit {
 
     public void setIdFournisseur(int idFournisseur) {
         this.idFournisseur = idFournisseur;
+    }
+
+    public String getCode_produit() {
+        return code_produit;
+    }
+
+    public void setCode_produit(String code_produit) {
+        this.code_produit = code_produit;
+    }
+
+    public String getRangement() {
+        return rangement;
+    }
+
+    public void setRangement(String rangement) {
+        this.rangement = rangement;
+    }
+
+    public double getRemise() {
+        return remise;
+    }
+
+    public void setRemise(double remise) {
+        this.remise = remise;
+    }
+
+    public int getStock() {
+        return stock;
+    }
+
+    public void setStock(int stock) {
+        this.stock = stock;
     }
     
     

@@ -5,6 +5,7 @@
  */
 package com.thedevbridge.stockweb.dao;
 
+import com.thedevbridge.stockweb.entities.User;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -40,4 +41,22 @@ public class UserDao {
                 }
             }
     }
+    
+    public boolean connectIt(String username, String password){
+        Connection connexion = DBConnection.connexionDatabase();
+        User u;
+        String sql = "SELECT * FROM user WHERE username="+username +" AND password="+password;
+            try {
+                pst = connexion.prepareStatement(sql);
+                rs= pst.executeQuery();
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            Logger.getLogger(ClientDao.class.getName()).log(Level.SEVERE, null, e);
+        }finally{
+            u = new User(username,password);
+            closeConnexion();
+        }
+            return true;
+    }
+    
 }

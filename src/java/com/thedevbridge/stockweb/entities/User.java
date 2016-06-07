@@ -12,22 +12,47 @@ package com.thedevbridge.stockweb.entities;
 public class User {
     
     private int idUser;
-    private String login;
+    private String username;
     private String password;
+    private String type;
 
     public User() {
     }
 
-    public User(int idUser, String login, String password) {
-        this.idUser = idUser;
-        this.login = login;
+    public User(String username, String password) {
+        this.username = username;
         this.password = password;
     }
 
-    public User(String login, String password) {
-        this.login = login;
+    public User(String username, String password, String type) {
+        this.username = username;
         this.password = password;
+        this.type = type;
     }
+
+    public User(int idUser, String username, String password, String type) {
+        this.idUser = idUser;
+        this.username = username;
+        this.password = password;
+        this.type = type;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
 
     public int getIdUser() {
         return idUser;
@@ -35,14 +60,6 @@ public class User {
 
     public void setIdUser(int idUser) {
         this.idUser = idUser;
-    }
-
-    public String getLogin() {
-        return login;
-    }
-
-    public void setLogin(String login) {
-        this.login = login;
     }
 
     public String getPassword() {

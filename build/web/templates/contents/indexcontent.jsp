@@ -91,10 +91,10 @@
               <div class="col-md-3 col-sm-6 col-xs-12">
                 <div class="single-team-member">
                  <div class="team-member-img">
-                   <img src="assets/images/team-member-2.png" style="height: 260px;width: 235px" alt="team member img">
+                   <img src="assets/images/team-member-2.png" style="height: 252px;width: 235px" alt="team member img">
                  </div>
                  <div class="team-member-name">
-                   <p>John Doe</p>
+                   <p>Ferry BAKONGO</p>
                    <span>CEO</span>
                  </div>
                  <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>

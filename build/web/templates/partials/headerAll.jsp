@@ -117,7 +117,7 @@
           <h4 class="modal-title"><i class="fa fa-unlock-alt"></i>Login</h4>
         </div>
         <div class="modal-body">
-          <form>
+            <form>
             <div class="form-group">
               <input type="text" placeholder="Username" class="form-control">
             </div>

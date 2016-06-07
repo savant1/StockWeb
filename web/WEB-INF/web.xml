@@ -25,7 +25,7 @@
         <servlet-class>com.thedevbridge.stockweb.servlet.UserServlet</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>loginServlet</servlet-name>
+        <servlet-name>LoginServlet</servlet-name>
         <servlet-class>com.thedevbridge.stockweb.servlet.LoginServlet</servlet-class>
     </servlet>
     <servlet-mapping>
@@ -49,7 +49,7 @@
         <url-pattern>/userservlet</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>loginServlet</servlet-name>
+        <servlet-name>LoginServlet</servlet-name>
         <url-pattern>/loginservlet</url-pattern>
     </servlet-mapping>
     <session-config>

@@ -84,7 +84,7 @@
                 <li>
                   <div class="phone">
                     <i class="fa fa-phone"></i>
-                    +00(237) 697-929-484
+                    +00(237) 697-929-584
                   </div>
                 </li>
                 <li>
@@ -117,16 +117,16 @@
           <h4 class="modal-title"><i class="fa fa-unlock-alt"></i>Login</h4>
         </div>
         <div class="modal-body">
-          <form  method="POST" action="./LoginServlet">
+          <form  method="POST" action="loginservlet">
             <div class="form-group">
-                <input type="text" placeholder="username" value="${user.username}" class="form-control">
+                <input type="text" placeholder="username" name="username" class="form-control">
             </div>
             <div class="form-group">
-              <input type="password" placeholder="Password" value="${user.password}" class="form-control">
+              <input type="password" placeholder="Password" name="password" class="form-control">
             </div>
              <div class="loginbox">
               <label><input type="checkbox"><span>Remember me</span></label>
-              <button class="btn signin-btn" type="button">SIGN IN</button>
+              <input type="submit" class="btn signin-btn" value="SIGN IN"/>
             </div>                    
           </form>
         </div>

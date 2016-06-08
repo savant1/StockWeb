@@ -6,8 +6,8 @@
             <file>file:/home/ferry/NetBeansProjects/StockWeb/src/java/com/thedevbridge/stockweb/dao/ClientDao.java</file>
             <file>file:/home/ferry/NetBeansProjects/StockWeb/src/java/com/thedevbridge/stockweb/dao/UserDao.java</file>
             <file>file:/home/ferry/NetBeansProjects/StockWeb/src/java/com/thedevbridge/stockweb/servlet/LoginServlet.java</file>
-            <file>file:/home/ferry/NetBeansProjects/StockWeb/web/templates/partials/header.jsp</file>
             <file>file:/home/ferry/NetBeansProjects/StockWeb/src/java/com/thedevbridge/stockweb/entities/User.java</file>
+            <file>file:/home/ferry/NetBeansProjects/StockWeb/web/WEB-INF/web.xml</file>
         </group>
     </open-files>
 </project-private>

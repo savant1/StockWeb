@@ -30,13 +30,13 @@ public class LoginServlet extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String username = request.getParameter("username");
-        String password = request.getParameter("password");
-        User user = new User(username,password);
         UserDao userDao = new UserDao();
-        if(userDao.connectIt(username,password)){
-            request.setAttribute("user", user);
+        User u = new User(request.getParameter("username"),request.getParameter("password"));
+        if(userDao.connectIt(request).equals(u)){
+            request.setAttribute("user", u);
             this.getServletContext().getRequestDispatcher("/home.jsp").forward(request, response);
+        }else{
+            this.getServletContext().getRequestDispatcher("/index.jsp").forward(request, response);
         }
     }
 

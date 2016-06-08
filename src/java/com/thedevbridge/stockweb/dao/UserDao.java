@@ -12,6 +12,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.servlet.http.HttpServletRequest;
 
 /**
  *
@@ -20,6 +21,7 @@ import java.util.logging.Logger;
 public class UserDao {
     PreparedStatement pst;
     ResultSet rs ;
+        User u;
     
         //vous utiliserez cette methode pour fermer toute les instances de connexions en cour
     public void closeConnexion(){
@@ -42,21 +44,26 @@ public class UserDao {
             }
     }
     
-    public boolean connectIt(String username, String password){
+    public User connectIt(HttpServletRequest request){
         Connection connexion = DBConnection.connexionDatabase();
-        User u;
-        String sql = "SELECT * FROM user WHERE username="+username +" AND password="+password;
-            try {
+        String username = request.getParameter("username");
+        String password = request.getParameter("password");
+        String sql = "SELECT * FROM utilisateur WHERE username="+username +" AND password="+password;
+        try {
                 pst = connexion.prepareStatement(sql);
                 rs= pst.executeQuery();
         } catch (Exception e) {
             System.out.println(e.getMessage());
             Logger.getLogger(ClientDao.class.getName()).log(Level.SEVERE, null, e);
         }finally{
-            u = new User(username,password);
+            try {
+                u = new User(rs.getString("username"),rs.getString("password"));
+            } catch (SQLException ex) {
+                Logger.getLogger(UserDao.class.getName()).log(Level.SEVERE, null, ex);
+            }
             closeConnexion();
         }
-            return true;
+        return u;
     }
     
 }

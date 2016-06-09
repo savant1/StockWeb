@@ -8,7 +8,7 @@
           <div class="col-md-6 col-sm-6 col-xs-12">
             <div class="single-page-header-left">
               <h2>404 Error - Not Found</h2>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+              <p>Oup's erreur lors du traitement des donnees</p>
             </div>
           </div>
           <div class="col-md-6 col-sm-6 col-xs-12">
@@ -34,7 +34,7 @@
             <div class="error-content">
               <span>Opps!</span>
               <p>We're sorry, but the page you were looking for doesn't exist.</p>
-              <a class="error-home" href="index1.html">Home Page</a>
+              <a class="error-home" href="index.jsp">Home Page</a>
             </div>
           </div>
         </div>

@@ -16,10 +16,10 @@
         <servlet-name>ProduitServlet</servlet-name>
         <servlet-class>com.thedevbridge.stockweb.servlet.ProduitServlet</servlet-class>
     </servlet>
-    <error-page>
+<!--    <error-page>
         <exception-type>java.lang.Exception</exception-type>
         <location>/templates/contents/404.jsp</location>
-    </error-page>
+    </error-page>-->
     <servlet>
         <servlet-name>UserServlet</servlet-name>
         <servlet-class>com.thedevbridge.stockweb.servlet.UserServlet</servlet-class>

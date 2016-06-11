@@ -5,6 +5,7 @@
  */
 package com.thedevbridge.stockweb.dao;
 
+import com.thedevbridge.stockweb.entities.Fournisseur;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -39,5 +40,22 @@ public class FournisseurDao {
                     Logger.getLogger(ClientDao.class.getName()).log(Level.SEVERE, null, ex);
                 }
             }
+    }
+    
+     public Fournisseur saveFournisseur(Fournisseur f){
+        Connection connexion = DBConnection.connexionDatabase();
+        String sql = "INSERT INTO fournisseur (nomSociete,nomfournisseur) values (?,?)";
+        try {
+            pst = connexion.prepareStatement(sql);
+            pst.setString(1, f.getNomSociete());
+            pst.setString(2, f.getNomFournisseur());
+            pst.executeUpdate();
+        } catch (SQLException sqle) {
+            System.out.println(sqle.getMessage());
+            Logger.getLogger(ClientDao.class.getName()).log(Level.SEVERE, null, sqle);
+        }finally{
+            closeConnexion();
+        }
+        return f;
     }
 }

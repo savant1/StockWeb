@@ -5,9 +5,10 @@
  */
 package com.thedevbridge.stockweb.servlet;
 
-import com.thedevbridge.stockweb.dao.UserDao;
-import com.thedevbridge.stockweb.entities.User;
+import com.thedevbridge.stockweb.dao.FournisseurDao;
+import com.thedevbridge.stockweb.entities.Fournisseur;
 import java.io.IOException;
+import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -17,10 +18,8 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author ferry
  */
-public class LoginServlet extends HttpServlet {
-    
-    private static final long serialVersionUID = 1L;
-    
+public class savenewfournisseur extends HttpServlet {
+
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -32,15 +31,11 @@ public class LoginServlet extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        UserDao userDao = new UserDao();
-        User u = new User(request.getParameter("username"),request.getParameter("password"));
-        if(userDao.connectIt(request).equals(u)){
-            request.setAttribute("user", u);
-            this.getServletContext().getRequestDispatcher("/home.jsp").forward(request, response);
-        }else{
-            System.out.print("voici les elements de connection ");
-            this.getServletContext().getRequestDispatcher("/404.jsp").forward(request, response);
-        }
+        response.setContentType("text/html;charset=UTF-8");
+        FournisseurDao fournisseurDao = new FournisseurDao();
+       Fournisseur fournissuer = new Fournisseur(request.getParameter("nomSociete"),request.getParameter("nomfournisseur"));
+       fournisseurDao.saveFournisseur(fournissuer);
+       this.getServletContext().getRequestDispatcher("/newfournisseur.jsp").forward(request, response);
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

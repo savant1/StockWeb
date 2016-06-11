@@ -3,11 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/home/ferry/NetBeansProjects/StockWeb/src/java/com/thedevbridge/stockweb/servlet/saveClientServlet.java</file>
             <file>file:/home/ferry/NetBeansProjects/StockWeb/src/java/com/thedevbridge/stockweb/dao/ClientDao.java</file>
-            <file>file:/home/ferry/NetBeansProjects/StockWeb/src/java/com/thedevbridge/stockweb/dao/UserDao.java</file>
-            <file>file:/home/ferry/NetBeansProjects/StockWeb/src/java/com/thedevbridge/stockweb/servlet/LoginServlet.java</file>
-            <file>file:/home/ferry/NetBeansProjects/StockWeb/src/java/com/thedevbridge/stockweb/entities/User.java</file>
-            <file>file:/home/ferry/NetBeansProjects/StockWeb/web/WEB-INF/web.xml</file>
+            <file>file:/home/ferry/NetBeansProjects/StockWeb/web/templates/contents/newfournisseur.jsp</file>
+            <file>file:/home/ferry/NetBeansProjects/StockWeb/src/java/com/thedevbridge/stockweb/dao/FournisseurDao.java</file>
+            <file>file:/home/ferry/NetBeansProjects/StockWeb/src/java/com/thedevbridge/stockweb/servlet/savenewfournisseur.java</file>
+            <file>file:/home/ferry/NetBeansProjects/StockWeb/src/java/com/thedevbridge/stockweb/entities/Client.java</file>
         </group>
     </open-files>
 </project-private>

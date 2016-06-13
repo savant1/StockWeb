@@ -5,7 +5,11 @@
  */
 package com.thedevbridge.stockweb.servlet;
 
+import com.thedevbridge.stockweb.beans.ClientBean;
+import com.thedevbridge.stockweb.dao.ClientDao;
+import com.thedevbridge.stockweb.entities.Client;
 import java.io.IOException;
+import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -29,6 +33,13 @@ public class ClientServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         // mettre tout le code de doGet et doPost ici
+        ClientBean clientBean = new ClientBean();
+        Client client = new Client();  
+        ClientDao clientDao = new ClientDao();
+        List<Client> allclient = clientDao.findAllClient();
+        while(allclient.contains(this)){
+            clientBean.getListClientBean().add(client);
+        }
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

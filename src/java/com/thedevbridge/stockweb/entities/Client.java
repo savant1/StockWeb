@@ -19,6 +19,9 @@ public class Client implements Serializable{
     private String contact;
     private ArrayList<Commande> listCommande;
 
+    public Client() {
+    }
+
     public Client(int id, String nom, String adresse, String contact, ArrayList<Commande> listCommande) {
         this.id = id;
         this.nom = nom;

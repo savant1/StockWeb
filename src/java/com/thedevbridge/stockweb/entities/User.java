@@ -70,5 +70,13 @@ public class User {
         this.password = password;
     }
     
-    
+    @Override
+    public boolean equals(Object obj) {
+        User u;
+       if(obj == null){
+           return false;
+       } 
+       u = (User) obj;
+        return u.username.equals(this.username) && u.password.equals(this.password);
+    }
 }

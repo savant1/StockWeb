@@ -16,7 +16,7 @@
         </div>
         <div class="col-md-6 col-sm-6">
           <div class="footer-right">
-            <a href="index1.html"><i class="fa fa-facebook"></i></a>
+            <a href="index.jsp"><i class="fa fa-facebook"></i></a>
             <a href="#"><i class="fa fa-twitter"></i></a>
             <a href="#"><i class="fa fa-google-plus"></i></a>
             <a href="#"><i class="fa fa-linkedin"></i></a>

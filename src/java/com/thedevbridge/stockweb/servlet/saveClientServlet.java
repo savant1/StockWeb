@@ -8,7 +8,6 @@ package com.thedevbridge.stockweb.servlet;
 import com.thedevbridge.stockweb.dao.ClientDao;
 import com.thedevbridge.stockweb.entities.Client;
 import java.io.IOException;
-import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;

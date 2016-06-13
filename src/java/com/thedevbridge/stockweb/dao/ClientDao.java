@@ -14,6 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.servlet.http.HttpServletRequest;
 
 /**
  *
@@ -81,6 +82,12 @@ public class ClientDao {
         }finally{
             closeConnexion();
         }
+        
+        return client;
+    }
+    
+    public List<Client> takeAll(HttpServletRequest request){
+        List<Client> client = new ArrayList();
         
         return client;
     }

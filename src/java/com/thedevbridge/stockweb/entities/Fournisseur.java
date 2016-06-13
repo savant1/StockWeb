@@ -13,9 +13,9 @@ public class Fournisseur {
     
     private int idFournisseur;
     private String nomSociete;
-    private int nomFournisseur;
+    private String nomFournisseur;
 
-    public Fournisseur(int idFournisseur, String nomSociete, int nomFournisseur) {
+    public Fournisseur(int idFournisseur, String nomSociete, String nomFournisseur) {
         this.idFournisseur = idFournisseur;
         this.nomSociete = nomSociete;
         this.nomFournisseur = nomFournisseur;
@@ -24,7 +24,7 @@ public class Fournisseur {
     public Fournisseur() {
     }
 
-    public Fournisseur(String nomSociete, int nomFournisseur) {
+    public Fournisseur(String nomSociete, String nomFournisseur) {
         this.nomSociete = nomSociete;
         this.nomFournisseur = nomFournisseur;
     }
@@ -45,11 +45,11 @@ public class Fournisseur {
         this.nomSociete = nomSociete;
     }
 
-    public int getNomFournisseur() {
+    public String getNomFournisseur() {
         return nomFournisseur;
     }
 
-    public void setNomFournisseur(int nomFournisseur) {
+    public void setNomFournisseur(String nomFournisseur) {
         this.nomFournisseur = nomFournisseur;
     }
     

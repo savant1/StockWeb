@@ -7,13 +7,13 @@
                  <div class="contact-area-right">
                      <form action="saveClientServlet" method="POST" class="comments-form contact-form">
                     <div class="form-group">                        
-                      <input type="text" name="nom" class="form-control" placeholder="Client Name">
+                        <input type="text" name="nom" required="required" class="form-control" placeholder="Client Name">
                     </div>
                     <div class="form-group">                        
-                        <input type="text" name="adresse" class="form-control" placeholder="Client Adresse">
+                        <input type="text" name="adresse" required="required" class="form-control" placeholder="Client Adresse">
                     </div>
                      <div class="form-group">                        
-                      <input type="text" name="contact" class="form-control" placeholder="Client Contact">
+                      <input type="text" name="contact" required="required" class="form-control" placeholder="Client Contact">
                     </div>
                        <input type="submit" class="btn btn-lg btn-success" value="Cree"/>
                   </form>

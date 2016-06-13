@@ -24,7 +24,8 @@
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Clientelle <span class="fa fa-angle-down"></span></a>
               <ul class="dropdown-menu" role="menu">
                 <li><a href="newclient.jsp">Cree un nouveau client</a></li>                
-                <li><a href="allclients.jsp">Voir tous les clients</a></li>         
+                <li><a href="allclients.jsp">Voir tous les clients</a></li>                
+                <li><a href="commandeclients.jsp">commande clientelle</a></li>         
               </ul>
             </li>      
             <li class="dropdown">

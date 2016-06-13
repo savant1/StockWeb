@@ -38,7 +38,8 @@ public class LoginServlet extends HttpServlet {
             request.setAttribute("user", u);
             this.getServletContext().getRequestDispatcher("/home.jsp").forward(request, response);
         }else{
-            this.getServletContext().getRequestDispatcher("/index.jsp").forward(request, response);
+            System.out.print("voici les elements de connection ");
+            this.getServletContext().getRequestDispatcher("/404.jsp").forward(request, response);
         }
     }
 

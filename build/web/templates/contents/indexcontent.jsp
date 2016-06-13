@@ -62,7 +62,7 @@
               </div>
               <div class="col-md-6 col-sm-6">
                 <div class="slider-img wow fadeInUp">
-                  <img src="assets/images/young-businessman.jpg" alt="business man">
+                  <img src="assets/images/young-businessman.png" alt="business man">
                 </div>
               </div>
             </div>
@@ -109,19 +109,19 @@
               <!-- Start single team member -->
               <div class="col-md-3 col-sm-6 col-xs-12">
                 <div class="single-team-member">
-                 <div class="team-member-img">
-                   <img src="assets/images/team-member-1.png" alt="team member img">
-                 </div>
-                 <div class="team-member-name">
-                   <p>Bernice Neumann</p>
-                   <span>Designer</span>
-                 </div>
-                 <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
-                 <div class="team-member-link">
-                   <a href="#"><i class="fa fa-facebook"></i></a>
-                   <a href="#"><i class="fa fa-twitter"></i></a>
-                   <a href="#"><i class="fa fa-linkedin"></i></a>
-                 </div>
+                    <div class="team-member-img">
+                      <img src="assets/images/team-member-1.png" alt="team member img">
+                    </div>
+                    <div class="team-member-name">
+                       <p>Bernice Neumann</p>
+                       <span>Designer</span>
+                    </div>
+                    <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+                    <div class="team-member-link">
+                      <a href="#"><i class="fa fa-facebook"></i></a>
+                      <a href="#"><i class="fa fa-twitter"></i></a>
+                      <a href="#"><i class="fa fa-linkedin"></i></a>
+                    </div>
                 </div>
               </div>
               <!-- Start single team member -->
@@ -132,7 +132,7 @@
                    <img src="assets/images/team-member-3.png" alt="team member img">
                  </div>
                  <div class="team-member-name">
-                   <p>Dvid Cameron</p>
+                   <p>David Cameron</p>
                    <span>Developer</span>
                  </div>
                  <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>

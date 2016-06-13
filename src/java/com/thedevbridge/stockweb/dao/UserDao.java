@@ -48,16 +48,21 @@ public class UserDao {
         Connection connexion = DBConnection.connexionDatabase();
         String username = request.getParameter("username");
         String password = request.getParameter("password");
-        String sql = "SELECT * FROM utilisateur WHERE username="+username +" AND password="+password;
+        System.out.print("voici les elements de connection "+password + username);
+        String sql = "SELECT * FROM utilisateur WHERE username= ? AND password= ? ";
         try {
                 pst = connexion.prepareStatement(sql);
+                pst.setString(1, username);
+                pst.setString(2, password);
                 rs= pst.executeQuery();
         } catch (Exception e) {
             System.out.println(e.getMessage());
             Logger.getLogger(ClientDao.class.getName()).log(Level.SEVERE, null, e);
         }finally{
             try {
-                u = new User(rs.getString("username"),rs.getString("password"));
+                if(rs.next()){
+                    u = new User(rs.getString("username"),rs.getString("password"));
+                }
             } catch (SQLException ex) {
                 Logger.getLogger(UserDao.class.getName()).log(Level.SEVERE, null, ex);
             }

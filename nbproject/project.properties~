@@ -65,7 +65,6 @@ javadoc.use=true
 javadoc.version=false
 javadoc.windowtitle=
 lib.dir=${web.docbase.dir}/WEB-INF/lib
-no.dependencies=false
 persistence.xml.dir=${conf.dir}
 platform.active=default_platform
 resource.dir=setup
@@ -84,4 +83,3 @@ war.ear.name=${war.name}
 war.name=StockWeb.war
 web.docbase.dir=web
 webinf.dir=web/WEB-INF
-

@@ -45,6 +45,7 @@ public class FournisseurDao {
      public Fournisseur saveFournisseur(Fournisseur f){
         Connection connexion = DBConnection.connexionDatabase();
         String sql = "INSERT INTO fournisseur (nomsociete,nomfournisseur) values (?,?)";
+
         try {
             pst = connexion.prepareStatement(sql);
             pst.setString(1, f.getNomSociete());

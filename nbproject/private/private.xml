@@ -3,8 +3,29 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/home/menekeu/Documents/Thedevbridge/Github/StockWeb/src/java/com/thedevbridge/stockweb/servlet/commandeclientservlet.java</file>
             <file>file:/home/menekeu/Documents/Thedevbridge/Github/StockWeb/web/templates/contents/commandeclientscontent.jsp</file>
+=======
+<<<<<<< HEAD
+            <file>file:/home/ferry/NetBeansProjects/StockWeb/src/java/com/thedevbridge/stockweb/dao/UserDao.java</file>
+            <file>file:/home/ferry/NetBeansProjects/StockWeb/src/java/com/thedevbridge/stockweb/dao/Parameters.java</file>
+            <file>file:/home/ferry/NetBeansProjects/StockWeb/src/java/com/thedevbridge/stockweb/servlet/LoginServlet.java</file>
+            <file>file:/home/ferry/NetBeansProjects/StockWeb/src/java/com/thedevbridge/stockweb/entities/User.java</file>
+            <file>file:/home/ferry/NetBeansProjects/StockWeb/web/allclients.jsp</file>
+            <file>file:/home/ferry/NetBeansProjects/StockWeb/src/java/com/thedevbridge/stockweb/entities/Client.java</file>
+=======
+<<<<<<< HEAD
+            <file>file:/home/ferry/NetBeansProjects/StockWeb/web/templates/partials/navAll.jsp</file>
+            <file>file:/home/ferry/NetBeansProjects/StockWeb/src/java/com/thedevbridge/stockweb/beans/ClientBean.java</file>
+            <file>file:/home/ferry/NetBeansProjects/StockWeb/src/java/com/thedevbridge/stockweb/servlet/ClientServlet.java</file>
+            <file>file:/home/ferry/NetBeansProjects/StockWeb/src/java/com/thedevbridge/stockweb/servlet/LoginServlet.java</file>
+            <file>file:/home/ferry/NetBeansProjects/StockWeb/web/templates/contents/allclientscontent.jsp</file>
+=======
+>>>>>>> parent of a145e6a... ajout de servlet
+            <file>file:/home/ferry/NetBeansProjects/StockWeb/web/templates/contents/indexcontent.jsp</file>
+>>>>>>> db26c7bd8b08c144a4fcd078cec0dc0ac5bd6342
+>>>>>>> fa2449397a1bd5a0d49e8349bf8170dec6125f50
         </group>
     </open-files>
 </project-private>

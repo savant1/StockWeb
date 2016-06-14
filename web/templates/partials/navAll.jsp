@@ -23,17 +23,10 @@
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Clientelle <span class="fa fa-angle-down"></span></a>
               <ul class="dropdown-menu" role="menu">
-<<<<<<< HEAD
                 <li><a href="newclient.jsp">Cree un nouveau client</a></li>  
-                <li><a href="allclients.jsp">Voir tous les clients</a></li>                
+                <li><a href="listClient">Voir tous les clients</a></li>                
                 <li><a href="commandeclientservlet">commande clientelle</a></li>         
               </ul> 
-=======
-                <li><a href="newclient.jsp">Cree un nouveau client</a></li>                
-                <li><a href="allclients.jsp">Voir tous les clients</a></li>                
-                <li><a href="commandeclients.jsp">commande clientelle</a></li>         
-              </ul>
->>>>>>> parent of a145e6a... ajout de servlet
             </li>      
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Produits <span class="fa fa-angle-down"></span></a>

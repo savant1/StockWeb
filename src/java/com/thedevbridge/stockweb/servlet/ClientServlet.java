@@ -37,8 +37,9 @@ public class ClientServlet extends HttpServlet {
         Client client = new Client();  
         ClientDao clientDao = new ClientDao();
         List<Client> allclient = clientDao.findAllClient();
-        request.setAttribute("listeClient", allclient);
-        this.getServletContext().getRequestDispatcher("/allclient.jsp").forward(request, response);
+        while(allclient.contains(this)){
+            clientBean.getListClientBean().add(client);
+        }
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

@@ -3,14 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-<<<<<<< HEAD
-            <file>file:/home/menekeu/Documents/Thedevbridge/Github/StockWeb/web/assets/css/slick.css</file>
-            <file>file:/home/menekeu/Documents/Thedevbridge/Github/StockWeb/src/java/com/thedevbridge/stockweb/dao/ClientDao.java</file>
-            <file>file:/home/menekeu/Documents/Thedevbridge/Github/StockWeb/web/home.jsp</file>
-            <file>file:/home/menekeu/Documents/Thedevbridge/Github/StockWeb/src/java/com/thedevbridge/stockweb/servlet/ClientServlet.java</file>
-=======
-            <file>file:/home/ferry/NetBeansProjects/StockWeb/web/templates/contents/indexcontent.jsp</file>
->>>>>>> 0813a4ce190a4ba17ac53399fd76e36152d4a091
+            <file>file:/home/ferry/NetBeansProjects/StockWeb/src/java/com/thedevbridge/stockweb/dao/UserDao.java</file>
+            <file>file:/home/ferry/NetBeansProjects/StockWeb/src/java/com/thedevbridge/stockweb/dao/Parameters.java</file>
+            <file>file:/home/ferry/NetBeansProjects/StockWeb/src/java/com/thedevbridge/stockweb/servlet/LoginServlet.java</file>
+            <file>file:/home/ferry/NetBeansProjects/StockWeb/src/java/com/thedevbridge/stockweb/entities/User.java</file>
+            <file>file:/home/ferry/NetBeansProjects/StockWeb/web/allclients.jsp</file>
+            <file>file:/home/ferry/NetBeansProjects/StockWeb/src/java/com/thedevbridge/stockweb/entities/Client.java</file>
         </group>
     </open-files>
 </project-private>

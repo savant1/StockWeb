@@ -20,11 +20,12 @@ public class Produit {
     private double prix;
     private int stock;
     private int idFournisseur;
+    
 
     public Produit() {
     }
 
-    public Produit(String code_produit, String reference, String designation, String rangement, double remise, double prix, int stock, int idFournisseur) {
+    public Produit(String code_produit, String reference, String designation, String rangement , double remise, int stock , int idFournisseur , double prix) {
         this.code_produit = code_produit;
         this.reference = reference;
         this.designation = designation;
@@ -35,7 +36,7 @@ public class Produit {
         this.idFournisseur = idFournisseur;
     }
 
-    public Produit(int idProduit, String code_produit, String reference, String designation, String rangement, double remise, double prix, int stock, int idFournisseur) {
+    public Produit(int idProduit, String code_produit, String reference, String designation, String rangement , double remise, int stock , int idFournisseur , double prix) {
         this.idProduit = idProduit;
         this.code_produit = code_produit;
         this.reference = reference;

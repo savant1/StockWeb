@@ -90,5 +90,5 @@ public class Client implements Serializable{
         this.listCommande = listCommande;
     }
     
-    
+  
 }

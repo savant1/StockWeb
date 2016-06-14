@@ -4,6 +4,7 @@
     Author     : ferry
 --%>
     
+<%@page import="com.thedevbridge.stockweb.entities.Produit"%>
 <%@page import="java.util.List"%>
 <%@page import="com.thedevbridge.stockweb.entities.Client"%>
 <section id="our-team">
@@ -29,24 +30,32 @@
                     <div class="form-group">                        
                       <input type="time" name="heure" required="required" class="form-control" placeholder="Heure Commande">
                     </div>
+                    <div class="form-group">
+                        <%List<Client>cl =(List)request.getAttribute("listeClient");%>
+                        <SELECT name="client" size="1">
+                        <%for (int j=0;j<cl.size();j++){
+                                Client client = (Client)cl.get(j);
+                        %>
+                        <OPTION value="<%=client.getId()%>"><%=client.getNom()%></OPTION>
+                        <%} %>
+                        </SELECT>
+                    </div>
+                    <div class="form-group">
+                        <%List<Produit>pd =(List)request.getAttribute("listeProduit");%>
+                        <SELECT name="produit" size="1">
+                        <%for (int j=0;j<pd.size();j++){
+                                Produit produit = (Produit)pd.get(j);
+                        %>
+                        <OPTION value="<%=produit.getIdProduit()%>"><%=produit.getReference()%></OPTION>
+                        <%} %>
+                        </SELECT>
+                    </div>    
                     <div class="form-group">                        
                       <input type="text" name="total" required="required" class="form-control" placeholder="Prix_total Produit">
                     </div>
                        <input type="submit" class="btn btn-lg btn-success" value="Cree"/>
                 </form>
-              
-              <td><FORM>
-                <%List<Client>cl =(List)request.getAttribute("listeClient");%>
-                <SELECT name="client" size="1">
-                <%for (int j=0;j<cl.size();j++){
-                        Client client = (Client)cl.get(j);
-                %>
-                <OPTION value="<%=client.getId()%>"><%=client.getNom()%></OPTION>
-                <%} %>
-                </SELECT>
-                </FORM>
-                </td>
-          </div>
+           </div>
       </div>
     </div>
 </section>

@@ -5,6 +5,8 @@
  */
 package com.thedevbridge.stockweb.entities;
 
+import java.util.Objects;
+
 /**
  *
  * @author ferry

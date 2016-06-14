@@ -6,7 +6,9 @@
 package com.thedevbridge.stockweb.servlet;
 
 import com.thedevbridge.stockweb.dao.ClientDao;
+import com.thedevbridge.stockweb.dao.ProduitDao;
 import com.thedevbridge.stockweb.entities.Client;
+import com.thedevbridge.stockweb.entities.Produit;
 import java.io.IOException;
 import java.util.List;
 import javax.servlet.ServletException;
@@ -34,6 +36,10 @@ public class commandeclientservlet extends HttpServlet {
         ClientDao clientDao = new ClientDao();
         List<Client> conteneurClient = clientDao.findAllClient();
         request.setAttribute("listeClient", conteneurClient);
+        
+        ProduitDao produitDao = new ProduitDao();
+        List<Produit> conteneurProduit = produitDao.findAllProdut();
+        request.setAttribute("listeProduit", conteneurProduit);
         this.getServletContext().getRequestDispatcher("/commandeclients.jsp").forward(request, response);
     }
 

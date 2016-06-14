@@ -36,6 +36,10 @@
         <servlet-name>savenewfournisseur</servlet-name>
         <servlet-class>com.thedevbridge.stockweb.servlet.savenewfournisseur</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>commandeclientservlet</servlet-name>
+        <servlet-class>com.thedevbridge.stockweb.servlet.commandeclientservlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ClientServlet</servlet-name>
         <url-pattern>/clientservlet</url-pattern>
@@ -67,6 +71,10 @@
     <servlet-mapping>
         <servlet-name>savenewfournisseur</servlet-name>
         <url-pattern>/savenewfournisseur</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>commandeclientservlet</servlet-name>
+        <url-pattern>/commandeclientservlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

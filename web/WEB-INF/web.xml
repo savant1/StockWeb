@@ -8,7 +8,7 @@
         <servlet-name>CommandeServlet</servlet-name>
         <servlet-class>com.thedevbridge.stockweb.servlet.CommandeServlet</servlet-class>
     </servlet>
-    <servlet>
+    <servlet> 
         <servlet-name>FournisseurServlet</servlet-name>
         <servlet-class>com.thedevbridge.stockweb.servlet.FournisseurServlet</servlet-class>
     </servlet>

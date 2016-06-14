@@ -86,12 +86,6 @@ public class ClientDao {
         return client;
     }
     
-    public List<Client> takeAll(HttpServletRequest request){
-        List<Client> client = new ArrayList();
-        
-        return client;
-    }
-    
     public Client findClientById(int id){
          Connection connexion = DBConnection.connexionDatabase();
         String sql = "SELECT * FROM client WHERE id="+id;

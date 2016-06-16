@@ -6,6 +6,7 @@
 package com.thedevbridge.stockweb.dao;
 
 import com.thedevbridge.stockweb.entities.Client;
+import com.thedevbridge.stockweb.entities.Commande;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -25,6 +26,7 @@ public class ClientDao {
     PreparedStatement pst;
     ResultSet rs ;
     Client cli;
+    Commande com;
     
         //vous utiliserez cette methode pour fermer toute les instances de connexions en cour
     public void closeConnexion(){
@@ -145,5 +147,26 @@ public class ClientDao {
             closeConnexion();
         }
         return c;
+    }
+    
+    //recuperation de la liste ds commandes d'un client
+    public List<Commande> listeCommande(){
+        Connection connexion = DBConnection.connexionDatabase();
+         List<Commande> commandeList = new ArrayList();
+        String sql = "SELECT * FROM commande WHERE idclient = 2";
+            try {
+            pst = connexion.prepareStatement(sql);
+            rs= pst.executeQuery();
+            while (rs.next()) {    
+               com = new Commande(rs.getInt(1),rs.getInt(2),rs.getInt(3),rs.getDouble(4),rs.getInt(5),rs.getInt(7),rs.getDouble(6));
+            }
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+            Logger.getLogger(ClientDao.class.getName()).log(Level.SEVERE, null, e);
+        }finally{
+            System.out.println(com+ "est null");
+            closeConnexion();
+        }
+        return commandeList;
     }
 }

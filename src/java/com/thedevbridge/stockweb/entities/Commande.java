@@ -49,6 +49,17 @@ public class Commande {
         this.subtotal = subtotal;
     }
 
+    public Commande(int idCommande, int num_facture, int quantite, double prix, int idClient, int idProduit, double subtotal) {
+        this.idCommande = idCommande;
+        this.num_facture = num_facture;
+        this.quantite = quantite;
+        this.prix = prix;
+        this.idClient = idClient;
+        this.idProduit = idProduit;
+        this.subtotal = subtotal;
+    }
+    
+
     public int getNum_facture() {
         return num_facture;
     }

@@ -48,7 +48,6 @@ public class UserDao {
         Connection connexion = DBConnection.connexionDatabase();
         String username = request.getParameter("username");
         String password = request.getParameter("password");
-        System.out.print("voici les elements de connection "+password + username);
         String sql = "SELECT * FROM utilisateur WHERE username= ? AND password= ? ";
         try {
                 pst = connexion.prepareStatement(sql);

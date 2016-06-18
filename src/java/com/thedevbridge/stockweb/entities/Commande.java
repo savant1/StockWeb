@@ -5,8 +5,9 @@
  */
 package com.thedevbridge.stockweb.entities;
 
-import java.sql.Date;
-import java.sql.Time;
+import java.util.Date;
+import org.apache.tomcat.jni.Time;
+
 
 /**
  *
@@ -15,18 +16,46 @@ import java.sql.Time;
 public class Commande {
     private int idCommande;
     private int num_facture;
-    private int quantite;
-    private double prix;
-    private Date dateCommande;
-    private Time heureCommande;
-    private int idClient;
     private int idProduit;
+    private String reference;
+    private double prix;
+    private int quantite;
     private double subtotal;
+    private int idClient;
+    private String dateCommande;
+    private String heureCommande;
 
     public Commande() {
     }
 
-    public Commande(int num_facture, int quantite, double prix, Date dateCommande, Time heureCommande, int idClient, int idProduit, double subtotal) {
+    public Commande(int idCommande, int num_facture, int idProduit, String reference, double prix, int quantite, double subtotal, int idClient, String dateCommande, String heureCommande) {
+        this.idCommande = idCommande;
+        this.num_facture = num_facture;
+        this.idProduit = idProduit;
+        this.reference = reference;
+        this.prix = prix;
+        this.quantite = quantite;
+        this.subtotal = subtotal;
+        this.idClient = idClient;
+        this.dateCommande = dateCommande;
+        this.heureCommande = heureCommande;
+    }
+
+    public Commande(int num_facture, int idProduit, String reference, double prix, int quantite, double subtotal, int idClient, String dateCommande, String heureCommande) {
+        this.num_facture = num_facture;
+        this.idProduit = idProduit;
+        this.reference = reference;
+        this.prix = prix;
+        this.quantite = quantite;
+        this.subtotal = subtotal;
+        this.idClient = idClient;
+        this.dateCommande = dateCommande;
+        this.heureCommande = heureCommande;
+    }
+    
+    
+
+    public Commande(int num_facture, int quantite, double prix, String dateCommande, String heureCommande, int idClient, int idProduit, double subtotal) {
         this.num_facture = num_facture;
         this.quantite = quantite;
         this.prix = prix;
@@ -37,7 +66,7 @@ public class Commande {
         this.subtotal = subtotal;
     }
 
-    public Commande(int idCommande, int num_facture, int quantite, double prix, Date dateCommande, Time heureCommande, int idClient, int idProduit, double subtotal) {
+    public Commande(int idCommande, int num_facture, int quantite, double prix, String dateCommande, String heureCommande, int idClient, int idProduit, double subtotal) {
         this.idCommande = idCommande;
         this.num_facture = num_facture;
         this.quantite = quantite;
@@ -80,6 +109,14 @@ public class Commande {
         return subtotal;
     }
 
+    public String getReference() {
+        return reference;
+    }
+
+    public void setReference(String reference) {
+        this.reference = reference;
+    }
+
     public void setSubtotal(double subtotal) {
         this.subtotal = subtotal;
     }
@@ -100,19 +137,19 @@ public class Commande {
         this.quantite = quantite;
     }
 
-    public Date getDateCommande() {
+    public String getDateCommande() {
         return dateCommande;
     }
 
-    public void setDateCommande(Date dateCommande) {
+    public void setDateCommande(String dateCommande) {
         this.dateCommande = dateCommande;
     }
 
-    public Time getHeureCommande() {
+    public String getHeureCommande() {
         return heureCommande;
     }
 
-    public void setHeureCommande(Time heureCommande) {
+    public void setHeureCommande(String heureCommande) {
         this.heureCommande = heureCommande;
     }
 

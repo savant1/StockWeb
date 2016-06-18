@@ -5,7 +5,6 @@
  */
 package com.thedevbridge.stockweb.dao;
 
-import com.thedevbridge.stockweb.entities.Client;
 import com.thedevbridge.stockweb.entities.Produit;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -65,5 +64,23 @@ public class ProduitDao {
             closeConnexion();
         }
         return produit;
+    }
+    
+    public Produit findProduitById(int id){
+         Connection connexion = DBConnection.connexionDatabase();
+        String sql = "SELECT * FROM produit WHERE id="+id;
+        try {
+            pst = connexion.prepareStatement(sql);
+            rs= pst.executeQuery();
+            while (rs.next()) {    
+               pro = new Produit(rs.getInt(1),rs.getString(2),rs.getString(3),rs.getString(4),rs.getString(5),rs.getDouble(6),rs.getInt(7),rs.getInt(8),rs.getDouble(9));
+            }
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+            Logger.getLogger(ProduitDao.class.getName()).log(Level.SEVERE, null, e);
+        }finally{
+            closeConnexion();
+        }
+        return pro;
     }
 }

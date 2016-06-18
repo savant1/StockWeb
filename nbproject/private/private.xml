@@ -3,12 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/ferry/NetBeansProjects/StockWeb/src/java/com/thedevbridge/stockweb/dao/ClientDao.java</file>
-            <file>file:/home/ferry/NetBeansProjects/StockWeb/web/allclients.jsp</file>
-            <file>file:/home/ferry/NetBeansProjects/StockWeb/src/java/com/thedevbridge/stockweb/servlet/listClient.java</file>
-            <file>file:/home/ferry/NetBeansProjects/StockWeb/src/java/com/thedevbridge/stockweb/dao/CommandeDao.java</file>
-            <file>file:/home/ferry/NetBeansProjects/StockWeb/src/java/com/thedevbridge/stockweb/entities/Client.java</file>
-            <file>file:/home/ferry/NetBeansProjects/StockWeb/web/templates/contents/allclientscontent.jsp</file>
+            <file>file:/home/ferry/NetBeansProjects/StockWeb/src/java/com/thedevbridge/stockweb/servlet/saveClientServlet.java</file>
+            <file>file:/home/ferry/NetBeansProjects/StockWeb/web/templates/contents/effectuercommandecontent.jsp</file>
+            <file>file:/home/ferry/NetBeansProjects/StockWeb/src/java/com/thedevbridge/stockweb/servlet/CommandeServlet.java</file>
+            <file>file:/home/ferry/NetBeansProjects/StockWeb/src/java/com/thedevbridge/stockweb/entities/Commande.java</file>
+            <file>file:/home/ferry/NetBeansProjects/StockWeb/src/java/com/thedevbridge/stockweb/servlet/EffectuercommandeServelet.java</file>
         </group>
     </open-files>
 </project-private>

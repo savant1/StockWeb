@@ -8,7 +8,7 @@
         <servlet-name>CommandeServlet</servlet-name>
         <servlet-class>com.thedevbridge.stockweb.servlet.CommandeServlet</servlet-class>
     </servlet>
-    <servlet> 
+    <servlet>
         <servlet-name>FournisseurServlet</servlet-name>
         <servlet-class>com.thedevbridge.stockweb.servlet.FournisseurServlet</servlet-class>
     </servlet>
@@ -43,6 +43,10 @@
     <servlet>
         <servlet-name>listClient</servlet-name>
         <servlet-class>com.thedevbridge.stockweb.servlet.listClient</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>effectuercommande</servlet-name>
+        <servlet-class>com.thedevbridge.stockweb.servlet.EffectuercommandeServelet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>ClientServlet</servlet-name>
@@ -83,6 +87,10 @@
     <servlet-mapping>
         <servlet-name>listClient</servlet-name>
         <url-pattern>/listClient</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>effectuercommande</servlet-name>
+        <url-pattern>/effectuercommande</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

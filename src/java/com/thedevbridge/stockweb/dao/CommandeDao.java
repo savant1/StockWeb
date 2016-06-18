@@ -5,6 +5,7 @@
  */
 package com.thedevbridge.stockweb.dao;
 
+import com.thedevbridge.stockweb.entities.Commande;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -39,5 +40,30 @@ public class CommandeDao {
                     Logger.getLogger(ClientDao.class.getName()).log(Level.SEVERE, null, ex);
                 }
             }
+    }
+    
+    public Commande saveArticleCommande(Commande c){
+        Connection connexion = DBConnection.connexionDatabase();
+        String sql = "INSERT INTO commande (num_facture,code_produit,reference,prix_vente,quantite,subtotal,idclient,datecommande,heurecommande)"
+                   + " values (?,?,?,?,?,?,?,?,?)";
+        try {
+            pst = connexion.prepareStatement(sql);
+            pst.setInt(1, c.getNum_facture());
+            pst.setInt(2, c.getIdProduit());
+            pst.setInt(3, c.getIdClient());
+            pst.setDouble(4, c.getPrix());
+            pst.setInt(5, c.getQuantite());
+            pst.setDouble(6, c.getSubtotal());
+            pst.setInt(7, c.getIdClient());
+            pst.setDate(8, c.getDateCommande());
+            pst.setTime(9, c.getHeureCommande());
+            pst.executeUpdate();
+        } catch (SQLException sqle) {
+            System.out.println(sqle.getMessage());
+            Logger.getLogger(ClientDao.class.getName()).log(Level.SEVERE, null, sqle);
+        }finally{
+            closeConnexion();
+        }
+        return c;
     }
 }

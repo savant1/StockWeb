@@ -15,7 +15,7 @@
                 <div class="col-md-8">
                     <div class="contact-area-right">
                         <form action="CommandeServlet" method="POST" class="comments-form contact-form">
-                              <div class="form-group">                        
+                              <!--<div class="form-group">                        
                                   <input type="int" name="id" required="required" class="form-control" placeholder="Numero Commande">
                               </div>
                               <div class="form-group">                        
@@ -32,10 +32,11 @@
                               </div>
                               <div class="form-group">                        
                                 <input type="time" name="heure" required="required" class="form-control" placeholder="Heure Commande">
-                              </div>
+                              </div>-->
                               <div class="form-group">
-                                  <%List<Client>cl =(List)request.getAttribute("listeClient");%>
-                                  <SELECT name="client" size="1">
+                                  <%List<Client> cl =(List)request.getAttribute("listeClient");%>
+                                  <SELECT name="idclient" style="width: 100%">
+                                  <OPTION value="">SELECTIONNER LE CLIENT </OPTION>
                                   <%for (int j=0;j<cl.size();j++){
                                           Client client = (Client)cl.get(j);
                                   %>
@@ -43,7 +44,7 @@
                                   <%} %>
                                   </SELECT>
                               </div>
-                              <div class="form-group">
+                             <!-- <div class="form-group">
                                   <%List<Produit>pd =(List)request.getAttribute("listeProduit");%>
                                   <SELECT name="produit" size="1">
                                   <%for (int j=0;j<pd.size();j++){
@@ -55,9 +56,10 @@
                               </div>    
                               <div class="form-group">                        
                                 <input type="text" name="total" required="required" class="form-control" placeholder="Prix_total Produit">
-                              </div>
+                              </div>-->
                                  <input type="submit" class="btn btn-lg btn-success" value="Cree"/>
                             </form>
+                                  <br><br><br><br><br><br><br><br>
                     </div>          
                 </div>   
            </div>

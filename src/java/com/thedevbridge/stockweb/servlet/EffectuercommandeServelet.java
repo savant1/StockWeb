@@ -5,12 +5,14 @@
  */
 package com.thedevbridge.stockweb.servlet;
 
+import com.thedevbridge.stockweb.dao.CommandeDao;
 import com.thedevbridge.stockweb.dao.ProduitDao;
+import com.thedevbridge.stockweb.entities.Commande;
 import com.thedevbridge.stockweb.entities.Produit;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -20,7 +22,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author ferry
  */
-public class CommandeServlet extends HttpServlet {
+public class EffectuercommandeServelet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -33,21 +35,27 @@ public class CommandeServlet extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        // mettre tout le code de doGet et doPost ici
-        //recuperation de l'idclient
-        int idClient = Integer.parseInt(request.getParameter("idclient"));
-        request.setAttribute("idclient", idClient);
-        //generation d'un numero pour la commande
         Date date = new Date();
-        SimpleDateFormat dateFormatComp;
-        dateFormatComp = new SimpleDateFormat("ddMMyyyyhhmmss");
-        String numcommande = dateFormatComp.format(date);
-        request.setAttribute("numcommande", numcommande);
-        //recuperation de la liste des produits
+        SimpleDateFormat dateFormatComp,heureFormatComp;
+        dateFormatComp = new SimpleDateFormat("dd MM yyyy");
+        heureFormatComp = new SimpleDateFormat("hh:mm:ss a");
+        String datecommande = dateFormatComp.format(date); 
+         String heurecommande = heureFormatComp.format(date);
+        CommandeDao commandeDao = new CommandeDao();
         ProduitDao produitDao = new ProduitDao();
-        List<Produit> conteneurProduit = produitDao.findAllProdut();
-        request.setAttribute("listeProduit", conteneurProduit);
-        this.getServletContext().getRequestDispatcher("/effectuercommande.jsp").forward(request, response);
+        int id = Integer.parseInt(request.getParameter("idclient"));
+        Produit produit = produitDao.findProduitById(id);
+        double soustotal = Double.parseDouble(request.getParameter("qantite"))*produit.getPrix();
+        Commande commande =  new Commande(
+                                Integer.parseInt(request.getParameter("numcommande"))
+                                ,Integer.parseInt(request.getParameter("produit")),
+                                produit.getReference(),
+                                produit.getPrix(),
+                                Integer.parseInt(request.getParameter("qantite"))
+                                ,soustotal,
+                                Integer.parseInt(request.getParameter("idclient"))
+                                ,dateFormatComp,
+                                heureFormatComp);
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

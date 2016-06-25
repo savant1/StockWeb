@@ -9,7 +9,7 @@
 <section id="our-team">
     <div class="container">
       <div class="row">
-          <div class="col-md-12">
+            <div class="col-md-12">
               <div class="col-md-2"></div>
               <div class="col-md-8">
                  <div class="contact-area-right">
@@ -22,7 +22,7 @@
                             <input type="hidden" name="idclient"  class="form-control" value="<%=idclient%>">
                         </div>
                         <div class="form-group col-xs-3">                        
-                            <input type="number" name="qantite" required="required" class="form-control" placeholder="Quantite">
+                            <input type="number" name="quantite" required="required" class="form-control" placeholder="Quantite">
                         </div>
                         <div class="form-group col-xs-9">
                             <%List<Produit> pd =(List)request.getAttribute("listeProduit");%>
@@ -42,7 +42,21 @@
                   </form>
                  </div>
                </div>
-          </div>
+            </div>
+            <div class="col-md-12">
+                <div class="col-md-4"></div>
+                <div class="col-md-4">
+                    <form action="genererfactureServelet" method="POST" class="comments-form contact-form">
+                        <div class="form-group">                        
+                            <input type="hidden" name="idclient"  class="form-control" value="<%=idclient%>">
+                        </div>  
+                        <div class="form-group">                        
+                            <input type="hidden" name="numcommande"  class="form-control" value="<%=numcommande%>">
+                        </div>
+                        <input type="submit" class="btn btn-lg btn-success" value="Generer La Facture"/>
+                    </form>
+                </div>
+            </div>
       </div>
     </div>
 </section>

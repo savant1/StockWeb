@@ -28,19 +28,6 @@ public class Commande {
     public Commande() {
     }
 
-    public Commande(int idCommande, int num_facture, int idProduit, String reference, double prix, int quantite, double subtotal, int idClient, String dateCommande, String heureCommande) {
-        this.idCommande = idCommande;
-        this.num_facture = num_facture;
-        this.idProduit = idProduit;
-        this.reference = reference;
-        this.prix = prix;
-        this.quantite = quantite;
-        this.subtotal = subtotal;
-        this.idClient = idClient;
-        this.dateCommande = dateCommande;
-        this.heureCommande = heureCommande;
-    }
-
     public Commande(int num_facture, int idProduit, String reference, double prix, int quantite, double subtotal, int idClient, String dateCommande, String heureCommande) {
         this.num_facture = num_facture;
         this.idProduit = idProduit;
@@ -52,8 +39,19 @@ public class Commande {
         this.dateCommande = dateCommande;
         this.heureCommande = heureCommande;
     }
-    
-    
+
+    public Commande(int idCommande, int num_facture, int idProduit, String reference, double prix, int quantite, double subtotal, int idClient, String dateCommande, String heureCommande) {
+        this.idCommande = idCommande;
+        this.num_facture = num_facture;
+        this.idProduit = idProduit;
+        this.reference = reference;
+        this.prix = prix;
+        this.quantite = quantite;
+        this.subtotal = subtotal;
+        this.idClient = idClient;
+        this.dateCommande = dateCommande;
+        this.heureCommande = heureCommande;
+    } 
 
     public Commande(int num_facture, int quantite, double prix, String dateCommande, String heureCommande, int idClient, int idProduit, double subtotal) {
         this.num_facture = num_facture;
@@ -86,8 +84,7 @@ public class Commande {
         this.idClient = idClient;
         this.idProduit = idProduit;
         this.subtotal = subtotal;
-    }
-    
+    }    
 
     public int getNum_facture() {
         return num_facture;
@@ -106,7 +103,7 @@ public class Commande {
     }
 
     public double getSubtotal() {
-        return subtotal;
+        return prix*quantite;
     }
 
     public String getReference() {

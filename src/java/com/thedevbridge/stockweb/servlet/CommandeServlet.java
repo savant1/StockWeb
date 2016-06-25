@@ -40,7 +40,7 @@ public class CommandeServlet extends HttpServlet {
         //generation d'un numero pour la commande
         Date date = new Date();
         SimpleDateFormat dateFormatComp;
-        dateFormatComp = new SimpleDateFormat("ddMMyyyyhhmmss");
+        dateFormatComp = new SimpleDateFormat("ddhhmmss");
         String numcommande = dateFormatComp.format(date);
         request.setAttribute("numcommande", numcommande);
         //recuperation de la liste des produits

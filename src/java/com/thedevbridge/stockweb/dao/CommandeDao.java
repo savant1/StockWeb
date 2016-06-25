@@ -50,13 +50,13 @@ public class CommandeDao {
             pst = connexion.prepareStatement(sql);
             pst.setInt(1, c.getNum_facture());
             pst.setInt(2, c.getIdProduit());
-            pst.setInt(3, c.getIdClient());
+            pst.setString(3, c.getReference());
             pst.setDouble(4, c.getPrix());
             pst.setInt(5, c.getQuantite());
             pst.setDouble(6, c.getSubtotal());
             pst.setInt(7, c.getIdClient());
-            pst.setDate(8, c.getDateCommande());
-            pst.setTime(9, c.getHeureCommande());
+            pst.setString(8, c.getDateCommande());
+            pst.setString(9, c.getHeureCommande());
             pst.executeUpdate();
         } catch (SQLException sqle) {
             System.out.println(sqle.getMessage());

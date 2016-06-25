@@ -13,6 +13,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -40,22 +41,29 @@ public class EffectuercommandeServelet extends HttpServlet {
         dateFormatComp = new SimpleDateFormat("dd MM yyyy");
         heureFormatComp = new SimpleDateFormat("hh:mm:ss a");
         String datecommande = dateFormatComp.format(date); 
-         String heurecommande = heureFormatComp.format(date);
+        String heurecommande = heureFormatComp.format(date);
         CommandeDao commandeDao = new CommandeDao();
         ProduitDao produitDao = new ProduitDao();
-        int id = Integer.parseInt(request.getParameter("idclient"));
+        int id = Integer.parseInt(request.getParameter("produit"));
         Produit produit = produitDao.findProduitById(id);
-        double soustotal = Double.parseDouble(request.getParameter("qantite"))*produit.getPrix();
+        System.out.println("le prix est : "+produit.getPrix()+" et son id est:"+id);
         Commande commande =  new Commande(
                                 Integer.parseInt(request.getParameter("numcommande"))
-                                ,Integer.parseInt(request.getParameter("produit")),
-                                produit.getReference(),
-                                produit.getPrix(),
-                                Integer.parseInt(request.getParameter("qantite"))
-                                ,soustotal,
+                                ,Integer.parseInt(request.getParameter("produit"))
+                                ,produit.getReference(),
+                                 produit.getPrix(),
+                                Integer.parseInt(request.getParameter("quantite"))
+                                ,(produit.getPrix()*Integer.parseInt(request.getParameter("quantite"))),
                                 Integer.parseInt(request.getParameter("idclient"))
-                                ,dateFormatComp,
-                                heureFormatComp);
+                                ,datecommande
+                                ,heurecommande
+                            );
+        commandeDao.saveArticleCommande(commande);
+        request.setAttribute("idclient", request.getParameter("idclient"));
+        request.setAttribute("numcommande", request.getParameter("numcommande"));
+        List<Produit> conteneurProduit = produitDao.findAllProdut();
+        request.setAttribute("listeProduit", conteneurProduit);
+        this.getServletContext().getRequestDispatcher("/CommandeServlet").forward(request, response);
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
